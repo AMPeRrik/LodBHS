@@ -1,0 +1,151 @@
+!SceneAsset
+Id: 88d42324-c8f6-4636-89fb-b0c9478b25ae
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! bed4b318-e080-4c8a-b5f5-c552d9a4a04f
+        - ref!! 36b7c89a-02ab-4985-99bc-6bf9c74e4ddf
+        - ref!! 33903796-1cf5-41ef-9bc2-296222a7f253
+        - ref!! 6ac178e6-de79-4e6a-bf98-6f0637ca0125
+        - ref!! 13326a97-37dd-455b-a9e5-9d3806910aba
+    Parts:
+        -   Entity:
+                Id: 13326a97-37dd-455b-a9e5-9d3806910aba
+                Name: Sphere
+                Components:
+                    9117ce4f83bf1ed69a6d1dc03f2ee0ce: !TransformComponent
+                        Id: 497cdc52-fd04-4ef8-9d94-f862f7d9b3e4
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b0c650dfd29f29c807188f870522cd6f: ref!! 67b9b1e4-13a5-4ba0-bca1-9ff192a3d58d
+                            80ce2a1967448393811e13663565043c: ref!! 0e8d090d-790a-4756-aeda-4ca3c13e7df8
+                    a86589bb96a17056995dc94ec5f081b8: !ModelComponent
+                        Id: 806b3f60-f4c1-4ac7-8875-bae7cfcc1155
+                        Model: 98e91ec0-37b2-4660-a2a9-165b402a6ebb:Models/Sphere
+                        Materials: {}
+                    ee120d9eb84919383d52af6187ae0e0e: !LOD.LodComponent,LOD
+                        Id: d3bf1b43-3431-41b1-a7fb-e87777b519cf
+                        lods:
+                            5eb06c683cd866aa2a833779258d4c54: ref!! f5ef1902-deb9-47cc-a8ca-ed7cf5d23474
+                            e9500f74cf6b485a9a67710787359c1c: ref!! 7f18b659-4d15-4099-8c34-d2bc1b61d9f8
+                        lodsEnableDistance: null
+                        distanceToCamera: 0.0
+        -   Entity:
+                Id: 33903796-1cf5-41ef-9bc2-296222a7f253
+                Name: Skybox
+                Components:
+                    9ea5260e66e9018b385805a13eef1c51: !TransformComponent
+                        Id: 23112905-e6e5-4be4-be6e-c65e324036a6
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f947be3c05fa81739f0d99b7ae4f31ae: !BackgroundComponent
+                        Id: 8751b5b2-0bc6-4122-98bf-c000169d8ed6
+                        Texture: 158541e5-2fe3-4687-b313-ced4d0fbead9:Material/Skybox texture
+                    31c7d3d968988970d04cf70c436bca02: !LightComponent
+                        Id: 55ea165f-adbb-47c0-b36c-d78ff9184142
+                        Type: !LightSkybox
+                            Skybox: 42065533-2162-4158-81cf-18c5de74feaf:Material/Skybox
+        -   Entity:
+                Id: 36b7c89a-02ab-4985-99bc-6bf9c74e4ddf
+                Name: Directional light
+                Components:
+                    a492367dc6a7ba039e48397f29394645: !TransformComponent
+                        Id: 900f961a-7ebd-49a8-8ac8-f40903864bd3
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ce68e8f142abc01c6acfa89e54661907: !LightComponent
+                        Id: 89c079dd-2c2f-4696-9e93-4f5b17b790a8
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 6ac178e6-de79-4e6a-bf98-6f0637ca0125
+                Name: Ground
+                Components:
+                    8ee78eea1397c10a4c7134bccb32073e: !TransformComponent
+                        Id: cca66a06-c343-4011-a316-f9938ae299de
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f7bf5123839924d4b7e2adaaf0d7a47f: !ModelComponent
+                        Id: 8318a70b-90d9-4320-bcd2-619a14aca13f
+                        Model: 3efcf4ab-34a6-4148-b537-5c835888551e:Models/Ground
+                        Materials: {}
+        -   Entity:
+                Id: bed4b318-e080-4c8a-b5f5-c552d9a4a04f
+                Name: Camera
+                Components:
+                    6e1ec7a94a72ea2aea41bb8e86bb41f1: !TransformComponent
+                        Id: 93340177-7523-475b-b0e2-7dc2ca18e220
+                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2ceef9301bc3858a13d109ebcc9bae1b: !CameraComponent
+                        Id: f8a29eac-b018-48dd-aa5c-2db565c6923a
+                        Name: null
+                        Projection: Perspective
+                        Slot: ef1ac583-32ab-4211-8240-fe4def9ceb4a
+                    8806fb7ac5b8fc72aec13b64caced784: !LOD.BasicCameraController,LOD
+                        Id: 36671dac-9ccd-4ec7-9215-1c925ea44fbf
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
+                    6b4acf0a9df1c4f278a6e7fd53b12c4d: !LOD.LodSettings,LOD
+                        Id: 4c02fac9-c2b8-41e1-b5f6-ebe45066ec76
+                        mainCamera: ref!! f8a29eac-b018-48dd-aa5c-2db565c6923a
+                        entitiesWithLods: {}
+        -   Entity:
+                Id: c428da4a-4328-4dd3-9b29-6a10bf575d54
+                Name: Cube
+                Components:
+                    29f5762fb2dbeee08df9252ef13b3cf2: !TransformComponent
+                        Id: 67b9b1e4-13a5-4ba0-bca1-9ff192a3d58d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fe6a967444bc48a59e07f70cf622c890: !ModelComponent
+                        Id: f5ef1902-deb9-47cc-a8ca-ed7cf5d23474
+                        Enabled: false
+                        Model: 993fa146-2781-4e85-8ff9-f7ac4e92ed7a:Models/Cube
+                        Materials: {}
+        -   Entity:
+                Id: d146c9b6-b791-42ab-b7fd-9498f78eca3b
+                Name: Capsule
+                Components:
+                    fd1c7c573c1a9d529c5be1c1bd9a7ccc: !TransformComponent
+                        Id: 0e8d090d-790a-4756-aeda-4ca3c13e7df8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    090b174af0aaef4b57d223a42bf31c8f: !ModelComponent
+                        Id: 7f18b659-4d15-4099-8c34-d2bc1b61d9f8
+                        Enabled: false
+                        Model: 2bb31106-6412-4e0c-ac36-91e43fba2d0c:Models/Capsule
+                        Materials: {}
